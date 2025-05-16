@@ -25,7 +25,8 @@ public class SpaceResourcePack extends JavaPlugin implements Listener, TabExecut
         getCommand("ssrp").setTabCompleter(this);
         saveDefaultConfig();
         new ru.moonmag.Metrics(this, 25598);
-    }
+        new UpdateChecker(this).checkForUpdates();
+        }
 
     @Override
     public void onDisable() {
